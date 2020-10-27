@@ -185,12 +185,21 @@ p {
 .shorter-input-container input {
     padding-left: 1rem;
     width: inherit;
+    font-size: 1rem;
+    color: var(--black);
+    font-family: 'Poppins', sans-serif;
 }
 
 
 .shorter-input-container input::placeholder {
     font-size: 1rem;
     font-family: 'Poppins', sans-serif;
+}
+
+.shorter-input-container input.invalid::placeholder {
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    color: #F46363;
 }
 
 .shorter-input-container input.invalid {
@@ -211,6 +220,40 @@ p {
 .shorter-input-container button {
     background-color: var(--primary-cyan);
     margin-top: 1rem;
+}
+
+.shortened-links-list-container {
+    margin-top: -5rem;
+    margin-bottom: 5rem;
+    display: grid;
+    gap: 1.5rem;
+}
+
+.shortened-link-item {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1rem;
+    display: grid;
+    gap: .8rem;
+}
+
+.shortened-link-item hr {
+    border-top: 1px solid var(--gray);
+}
+.shortened-link {
+    color: var(--primary-cyan);
+}
+
+.shortened-link-item button {
+    background-color: var(--primary-cyan);
+    border-radius: .5rem;
+    border: none;
+    height: 2.5rem;
+    font-size: 1rem;
+}
+
+.shortened-link-item.copied button {
+    background-color: var(--dark-purple);
 }
 
 
@@ -491,9 +534,45 @@ footer div a {
         height: 4rem;
     }
 
+    .input-container input {
+        font-size: 1.3rem;
+    }
+
+    .input-container input::placeholder {
+        font-size: 1.3rem;
+    }
+
     .shorter-input-container button {
         margin: 0;
         width: 25%;
+    }
+
+    .shortened-link-item {
+        padding-left: 2rem;
+        grid-template-columns: repeat(11, 1fr);
+        gap: .5rem;
+    }
+
+    .shortened-link-item hr {
+        display: none;
+    }
+
+    .original-link {
+        grid-column-start: span 7;
+        display: flex;
+        align-items: center;
+        font-size: 1.3rem;
+    }
+
+    .shortened-link {
+        grid-column-start: span 3;
+        display: flex;
+        align-items: center;
+        font-size: 1.3rem;
+    }
+
+    .shortened-link-item button {
+        width: 100px;
     }
 
     .about-perks-container {
