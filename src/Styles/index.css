@@ -237,11 +237,17 @@ p {
     gap: .8rem;
 }
 
+.original-link {
+    max-width: 100%;
+    overflow: scroll;
+}
+
 .shortened-link-item hr {
     border-top: 1px solid var(--gray);
 }
-.shortened-link {
+.shortened-link a{
     color: var(--primary-cyan);
+    text-decoration: none;
 }
 
 .shortened-link-item button {
@@ -546,6 +552,9 @@ footer div a {
         margin: 0;
         width: 25%;
     }
+    .shorter-input-container button:hover {
+        background-color: #9AE3E3;
+    }
 
     .shortened-link-item {
         padding-left: 2rem;
@@ -573,6 +582,14 @@ footer div a {
 
     .shortened-link-item button {
         width: 100px;
+    }
+
+    .shortened-link-item button:hover {
+        background-color: #9AE3E3;
+    }
+
+    .shortened-link-item.copied button:hover {
+        background-color: #665792;
     }
 
     .about-perks-container {
