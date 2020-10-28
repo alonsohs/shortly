@@ -1,5 +1,5 @@
 import ShortenedLinkItem from "../Templates/ShortenedLinkItem.js";
-import CopyButtonAction from "./CopyButtonAction.js";
+import AddCopyButtonAction from "./AddCopyButtonAction.js";
 import StoreShortenedLinks from "./StoreShortenedLinks.js";
 
 const GetShortenedLink = () => {
@@ -13,7 +13,7 @@ const GetShortenedLink = () => {
             let data = JSON.parse(rawString);
             let linksContainer = document.getElementById('shortened-links-list-container')
             linksContainer.innerHTML = linksContainer.innerHTML + ShortenedLinkItem(link, data.shortUrl)
-            CopyButtonAction()
+            AddCopyButtonAction()
             StoreShortenedLinks(link, data.shortUrl)
         }
     })

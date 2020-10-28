@@ -1,4 +1,4 @@
-const CopyButtonAction = () => {
+const AddCopyButtonAction = () => {
     const CopyButtons = document.getElementsByClassName('copy-link-button')
 
     for (let i = 0; i < CopyButtons.length; i++) {
@@ -24,4 +24,4 @@ const CopyButtonAction = () => {
     }
 }
 
-export default CopyButtonAction
+export default AddCopyButtonAction
