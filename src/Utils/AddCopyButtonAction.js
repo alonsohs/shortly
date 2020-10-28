@@ -5,7 +5,7 @@ const AddCopyButtonAction = () => {
 
         CopyButtons.item(i).addEventListener('click', (e) => {
             // Copy to the clipboard
-            const shortenedLink = e.target.previousElementSibling.innerHTML
+            const shortenedLink = e.target.previousElementSibling.firstChild.innerHTML
             const el = document.createElement('textarea');
             el.value = shortenedLink
             el.setAttribute('readonly', '');
@@ -17,7 +17,6 @@ const AddCopyButtonAction = () => {
             document.body.removeChild(el);
 
             // Update button
-            console.log(e.target.previousElementSibling.innerHTML)
             e.target.parentNode.classList.add('copied')
             e.target.textContent = 'Copied!'
         })
