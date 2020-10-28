@@ -571,6 +571,7 @@ footer div a {
         display: flex;
         align-items: center;
         font-size: 1.3rem;
+        overflow: hidden;
     }
 
     .shortened-link {
